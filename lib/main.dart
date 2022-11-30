@@ -1,9 +1,4 @@
-
-import 'package:animation_sample/screens/task1.dart';
-import 'package:animation_sample/screens/task2.dart';
-import 'package:animation_sample/screens/task3.dart';
-import 'package:animation_sample/screens/task4.dart';
-import 'package:animation_sample/screens/task_8.dart';
+import 'package:animation_sample/prasintations/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter animation',
-      home: const FirstTask(),
+      home:  HomeScreen(),
     );
   }
 }

@@ -39,9 +39,6 @@ class _FourthTaskState extends State<FourthTask> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Transform.rotate"),
-      ),
       body: Center(
         child: Transform.rotate(
           angle: animation.value,

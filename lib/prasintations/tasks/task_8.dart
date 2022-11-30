@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
-import '../companents/constants/images.dart';
+import '../../companents/constants/images.dart';
 
 class LastTask extends StatefulWidget {
   const LastTask({Key? key}) : super(key: key);
