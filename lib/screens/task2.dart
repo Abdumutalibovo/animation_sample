@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class ThirdTask extends StatefulWidget {
-  const ThirdTask({Key? key}) : super(key: key);
+class SecondTask extends StatefulWidget {
+  const SecondTask({Key? key}) : super(key: key);
   @override
-  State<ThirdTask> createState() => _ThirdTaskState();
+  State<SecondTask> createState() => _SecondTaskState();
 }
 
-class _ThirdTaskState extends State<ThirdTask> {
+class _SecondTaskState extends State<SecondTask> {
   double myRight=150.0;
   double myTop=300.0;
   @override

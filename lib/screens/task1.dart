@@ -1,48 +1,51 @@
 import 'package:flutter/material.dart';
 
-class TaskOne extends StatefulWidget {
-  const TaskOne({Key? key}) : super(key: key);
+class FirstTask extends StatefulWidget {
+  const FirstTask({Key? key}) : super(key: key);
 
   @override
-  State<TaskOne> createState() => _TaskOneState();
+  State<FirstTask> createState() => _FirstTaskState();
 }
-class _TaskOneState extends State<TaskOne> with  SingleTickerProviderStateMixin{
+class _FirstTaskState extends State<FirstTask> with  SingleTickerProviderStateMixin{
   late AnimationController controller;
   late Animation colorAnimation;
   late Animation textAnimation;
-  bool isSelected=false;
+  late Animation secondcolorAnimation;
+  bool isSelected=true;
   @override
   void initState() {
     super.initState();
     controller = AnimationController(vsync: this, duration: const Duration(seconds: 3));
     colorAnimation = ColorTween(begin: Colors.orange, end: Colors.green).animate(controller);
+    secondcolorAnimation=ColorTween(begin: Colors.green,end: Colors.orange).animate(controller);
     controller.addListener(() {
-      setState(() {
-      });
+      setState(() {});
     });
-    controller.forward();
+    controller.repeat();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Animation Demo"),
-      ),
       body: Center(
         child: Container(
           height: 300,
           width: 300,
           decoration: BoxDecoration(
-            color: isSelected?colorAnimation.value:Colors.orange,
+            color: isSelected?colorAnimation.value:secondcolorAnimation.value,
           ),
           child: Center(child: Text(isSelected?"This is widget":"This is second widget",style: TextStyle(fontSize: 30),)),
         ),
       ),
-      floatingActionButton: TextButton(
-        onPressed: (){
-          isSelected=!isSelected;
-        }, child: Text("Click me",style: TextStyle(fontSize: 30),),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(right: 120,bottom: 50),
+        child: TextButton(
+          onPressed: (){
+            setState((){
+              isSelected=!isSelected;
+            });
+          }, child: Text("Click me",style: TextStyle(fontSize: 30),),
+        ),
       ),
     );
   }

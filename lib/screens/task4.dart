@@ -2,14 +2,14 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 
-class TaskFour extends StatefulWidget {
-  const TaskFour({Key? key}) : super(key: key);
+class FourthTask extends StatefulWidget {
+  const FourthTask({Key? key}) : super(key: key);
 
   @override
-  State<TaskFour> createState() => _TaskFourState();
+  State<FourthTask> createState() => _FourthTaskState();
 }
 
-class _TaskFourState extends State<TaskFour> with TickerProviderStateMixin {
+class _FourthTaskState extends State<FourthTask> with TickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<double> animation;
 

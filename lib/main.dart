@@ -1,6 +1,8 @@
 
 import 'package:animation_sample/screens/task1.dart';
 import 'package:animation_sample/screens/task2.dart';
+import 'package:animation_sample/screens/task3.dart';
+import 'package:animation_sample/screens/task4.dart';
 import 'package:animation_sample/screens/task_8.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter animation',
-      home: ThirdTask(),
+      home: const FirstTask(),
     );
   }
 }

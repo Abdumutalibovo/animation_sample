@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 import '../companents/constants/images.dart';
 
-class TaskLast extends StatefulWidget {
-  const TaskLast({Key? key}) : super(key: key);
+class LastTask extends StatefulWidget {
+  const LastTask({Key? key}) : super(key: key);
 
   @override
-  State<TaskLast> createState() => _TaskLastState();
+  State<LastTask> createState() => _LastTaskState();
 }
 
-class _TaskLastState extends State<TaskLast>
+class _LastTaskState extends State<LastTask>
     with SingleTickerProviderStateMixin {
   late AnimationController animController;
   late Animation<double> animation;
